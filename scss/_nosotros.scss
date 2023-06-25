@@ -1,0 +1,47 @@
+@use 'variables' as v;
+
+.nosotros{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    &__img{
+     grid-row: 1/2;
+    }
+   
+}
+@media(min-width:768px){
+    .nosotros{
+        grid-template-columns: repeat(2 ,1fr);
+        column-gap: 2rem;
+        &__img{
+            grid-column: 2/3;
+            width: 100%;
+            
+        }
+    }
+}
+
+/*bloques*/
+.bloques{
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 2rem;
+
+}
+@media(min-width:768px){
+    .bloques{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.bloque{
+    text-align: center;
+    :hover{
+        cursor: pointer;
+
+    }
+    &__titulo{
+        margin: 0;
+        color: #000;
+    }
+   
+}
